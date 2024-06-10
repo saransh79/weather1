@@ -7,7 +7,7 @@ const Navbar = ({city, setCity, setData}) => {
     const handleSubmit= async (e)=>{
         e.preventDefault();
         if(!city) return "";
-        const {data} = await axios.post(`http://localhost:8000/api/v1/weather`, {city});
+        const {data} = await axios.post(`https://weather1-omega.vercel.app/api/v1/weather`, {city});
         // console.log(data);
         setData(data);
     }
