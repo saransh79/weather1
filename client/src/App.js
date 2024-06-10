@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
@@ -11,7 +10,7 @@ function App() {
 
   useEffect(()=>{
     const fetchdata= async ()=>{
-      const {data} = await axios.get(`http://localhost:8000/api/v1/my-weather`);
+      const {data} = await axios.get(`https://weather1-omega.vercel.app/api/v1/my-weather`);
       // console.log(data);
       setData(data);
   }
